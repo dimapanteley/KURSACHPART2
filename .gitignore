@@ -33,7 +33,7 @@ build/
 .vscode/
 /.mvn/wrapper/maven-wrapper.jar
 /.mvn/wrapper/maven-wrapper.properties
-/src/main/java/com/example/kursachnumber2/Kursachnumber2Application.java
+/src/main/java/com/example/kurs2/Kursachnumber2Application.java
 /src/main/resources/application.properties
 /src/test/java/com/example/kursachnumber2/Kursachnumber2ApplicationTests.java
 /.gitignore
