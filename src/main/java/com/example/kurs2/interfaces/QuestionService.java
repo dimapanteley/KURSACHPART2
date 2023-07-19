@@ -1,7 +1,6 @@
 package com.example.kurs2.interfaces;
 
-import com.example.kurs2.Question;
-import org.springframework.stereotype.Service;
+import com.example.kurs2.Qestion;
 
 import java.util.Set;
 
@@ -10,7 +9,7 @@ public interface QuestionService {
 
     void remove(String question, String answer);
 
-    Set<Question> getAll();
+    Set<Qestion> getAll();
 
-    Question getRandomQuestion();
+    Qestion getRandomQuestion();
 }

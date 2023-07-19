@@ -2,7 +2,6 @@ package com.example.kurs2;
 
 
 import com.example.kurs2.exceptions.AmountOutOfCollectionBoundException;
-import com.example.kurs2.interfaces.ExaminerService;
 import com.example.kurs2.services.ExaminerServiceImpl;
 import com.example.kurs2.services.JavaQuestionService;
 import org.junit.jupiter.api.BeforeEach;
@@ -48,7 +47,7 @@ public class ExaminerServiceImplTest {
         List<String> expectedQuestionList = examinerService.getQuestions(4);
 
         for (int i = 0; i < expectedQuestionList.size(); i++) {
-            for (Question element : jcs.getAll()) {
+            for (Qestion element : jcs.getAll()) {
                 if (expectedQuestionList.get(i).equals(element.getQuestion())) {
                     String expectedQuestion = element.getQuestion();
                     String actualQuestion = expectedQuestionList.get(i);

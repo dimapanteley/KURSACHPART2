@@ -14,7 +14,7 @@ public class JavaQuestionController {
         this.questionService = questionService;
     }
 
-    @GetMapping("/")
+    @GetMapping()
     public String getAll() {
         return questionService.getAll().toString();
     }

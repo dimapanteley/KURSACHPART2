@@ -1,4 +1,4 @@
-import com.example.kurs2.Question;
+import com.example.kurs2.Qestion;
 import com.example.kurs2.exceptions.ParameterIsNullException;
 import com.example.kurs2.services.JavaQuestionService;
 import org.junit.jupiter.api.BeforeEach;
@@ -45,7 +45,7 @@ public class JavaQuestionServiceTest {
 
     @ParameterizedTest
     @MethodSource("provideParamsForTheTests")
-    public void addParametrisedTest(Question question) {
+    public void addParametrisedTest(Qestion question) {
         fullCollectionWithTestQuestions();//добавляю тестовые вопросы и ответы
         assertTrue(jqs.getAll().contains(question)); //проверяю что тестовые вопросы добавились в коллекцию
     }
@@ -73,12 +73,12 @@ public class JavaQuestionServiceTest {
     @Test
     public void getAllTest() {
         fullCollectionWithTestQuestions();//добавляю тестовые вопросы и ответы
-        Set<Question> expectedSet = new HashSet<>(); //заполняю "ожидаемую" коллекцию
-        expectedSet.add(new Question(QUESTION1.getQuestion(), QUESTION1.getAnswer()));
-        expectedSet.add(new Question(QUESTION2.getQuestion(), QUESTION2.getAnswer()));
-        expectedSet.add(new Question(QUESTION3.getQuestion(), QUESTION3.getAnswer()));
-        expectedSet.add(new Question(QUESTION4.getQuestion(), QUESTION4.getAnswer()));
-        expectedSet.add(new Question(QUESTION5.getQuestion(), QUESTION5.getAnswer()));
+        Set<Qestion> expectedSet = new HashSet<>(); //заполняю "ожидаемую" коллекцию
+        expectedSet.add(new Qestion(QUESTION1.getQuestion(), QUESTION1.getAnswer()));
+        expectedSet.add(new Qestion(QUESTION2.getQuestion(), QUESTION2.getAnswer()));
+        expectedSet.add(new Qestion(QUESTION3.getQuestion(), QUESTION3.getAnswer()));
+        expectedSet.add(new Qestion(QUESTION4.getQuestion(), QUESTION4.getAnswer()));
+        expectedSet.add(new Qestion(QUESTION5.getQuestion(), QUESTION5.getAnswer()));
         assertNotNull(jqs.getAll()); //проверка, что коллекция не пуста
         assertEquals(expectedSet, jqs.getAll()); //проверка, что ожидаемая и актуальные коллекции совпадают
     }

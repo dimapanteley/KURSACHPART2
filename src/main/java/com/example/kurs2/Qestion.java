@@ -1,13 +1,12 @@
 package com.example.kurs2;
 
-import java.util.Collections;
 import java.util.Objects;
 
-public class Question {
+public class Qestion {
     private String question;
     private String answer;
 
-    public Question(String question, String answer) {
+    public Qestion(String question, String answer) {
         this.question = question;
         this.answer = answer;
     }
@@ -24,7 +23,7 @@ public class Question {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Question question1 = (Question) o;
+        Qestion question1 = (Qestion) o;
         return question.equals(question1.question) && answer.equals(question1.answer);
     }
 
